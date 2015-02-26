@@ -39,7 +39,7 @@ public class SwingControlDemo extends JFrame {
    private JLabel sendinglabel;
    private JLabel starttime;
    private JLabel endtime;
-private JLabel sendinglabel1;
+   private JLabel sendinglabel1;
 
 
    public SwingControlDemo(){
@@ -147,7 +147,7 @@ private JLabel sendinglabel1;
 
 
                                 public void actionPerformed(ActionEvent arg0) {
-
+                                	try{
                                     JFileChooser filedilg=new JFileChooser();
                                     filedilg.showOpenDialog(filedilg);
                                     filename=filedilg.getSelectedFile().getAbsolutePath();
@@ -156,6 +156,10 @@ private JLabel sendinglabel1;
                                     File file1=new File(filename);
                                     fname = file1.getName();           
                                     System.out.println("THE FILE NAME IS "+fname);
+                                	}
+                                	catch(Exception e){
+                                		e.printStackTrace();
+                                	}
                                 }
                               });
                               btnNewButton.setFont(new Font("Times New Roman", Font.PLAIN, 14));

@@ -54,7 +54,7 @@ public class SwingControlServer extends JFrame {
             byte[] readbyte=new byte[(1024*10)*1024];           
 
 
-            FileOutputStream fileOutputStream=new FileOutputStream("D:/Manoj/hello21.zip");
+            FileOutputStream fileOutputStream=new FileOutputStream("C:/shapanda.zip");
             int writebyte;
             int count=0;
             while((writebyte=inputStream.read(readbyte))!=-1)
