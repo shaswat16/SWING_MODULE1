@@ -20,13 +20,13 @@ public class TextAreaLogProgram extends JFrame {
 	 */
 	private JTextArea textArea;
 
-	private JButton buttonStart = new JButton("Start");
+	
 	private JButton buttonClear = new JButton("Clear");
 
 	private PrintStream standardOut;
 
 	public TextAreaLogProgram() {
-		super("Demo printing to JTextArea");
+		super("Operation Display");
 
 		textArea = new JTextArea(50, 10);
 		textArea.setEditable(false);
@@ -46,10 +46,7 @@ public class TextAreaLogProgram extends JFrame {
 		constraints.gridy = 0;
 		constraints.insets = new Insets(10, 10, 10, 10);
 		constraints.anchor = GridBagConstraints.WEST;
-
-		add(buttonStart, constraints);
-
-		constraints.gridx = 1;
+		
 		add(buttonClear, constraints);
 
 		constraints.gridx = 0;
@@ -60,14 +57,6 @@ public class TextAreaLogProgram extends JFrame {
 		constraints.weighty = 1.0;
 
 		add(new JScrollPane(textArea), constraints);
-
-		// adds event handler for button Start
-		buttonStart.addActionListener(new ActionListener() {
-		
-			public void actionPerformed(ActionEvent evt) {
-				eventLog("Class","Entered");
-			}
-		});
 
 		// adds event handler for button Clear
 		buttonClear.addActionListener(new ActionListener() {
@@ -107,8 +96,8 @@ public class TextAreaLogProgram extends JFrame {
 				//new TextAreaLogProgram().setVisible(true);
 				TextAreaLogProgram areaLogProgram=new TextAreaLogProgram();
 				areaLogProgram.setVisible(true);
-				areaLogProgram.eventLog("Class", "Start");
-				areaLogProgram.eventLog("Class", "End");
+				areaLogProgram.eventLog(new Date()+" "+"Class", "Start");
+				areaLogProgram.eventLog(new Date()+" "+"Class", "End");
 			}
 			
 				
