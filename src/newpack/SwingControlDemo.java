@@ -193,7 +193,7 @@ public class SwingControlDemo extends JFrame {
             System.out.println("Start time: "+starttime);
 
          try{
-//To get current working directory
+//To get current w orking directory
             String workingdirectory=System.getProperty("user.dir");
             System.out.println(workingdirectory);
 //Create folder name as LogFolder in workingdirectory
